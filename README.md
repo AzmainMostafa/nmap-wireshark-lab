@@ -1,6 +1,6 @@
 # Nmap + Wireshark Lab (Project 2 of Cybersecurity Roadmap)
 
-This project is part of my 12-month journey to become job-ready in cybersecurity. In **Project 2**, I explored core **network scanning** and **traffic analysis** skills using two fundamental tools: **Nmap** and **Wireshark**.
+This project is part of my 12-month journey. In **Project 2**, I explored core **network scanning** and **traffic analysis** skills using two fundamental tools: **Nmap** and **Wireshark**.
 
 ---
 
