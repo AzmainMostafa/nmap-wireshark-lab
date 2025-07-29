@@ -77,7 +77,7 @@ These ports are typical of Windows file and printer sharing features:
 **Purpose:**
 To scan the 100 most common TCP ports and attempt to detect the target's operating system.
 
-![OS Detection + Top 100 Ports](screenshots/OS-Detection-and- Top-100-ports.png)
+![OS Detection + Top 100 Ports](screenshots/OS-Detection-and-Top-100-ports.png)
 
 **Outcome:**
 Same open ports as before: 135, 139, and 445.
