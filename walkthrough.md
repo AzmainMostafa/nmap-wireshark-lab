@@ -48,7 +48,7 @@ After scanning my router, I wanted to try scanning another device on my network 
 **Purpose:**
 This command runs a TCP SYN scan (`-sS`) and includes service/version detection (`-sV`). The goal is to see which TCP ports are open and what services are running on them, along with their versions if possible.
 
-![TCP SYN and Version Scan](screenshots/TCP SYN and Version Scan.png)
+![TCP SYN and Version Scan](screenshots/TCP-SYN-and-Version-Scan.png)
 
 **Outcome:**
 Three ports were found open:
@@ -77,7 +77,7 @@ These ports are typical of Windows file and printer sharing features:
 **Purpose:**
 To scan the 100 most common TCP ports and attempt to detect the target's operating system.
 
-![OS Detection + Top 100 Ports](screenshots/OS Detection + Top 100 ports.png)
+![OS Detection + Top 100 Ports](screenshots/OS-Detection-and-Top-100-ports.png)
 
 **Outcome:**
 Same open ports as before: 135, 139, and 445.
@@ -95,7 +95,7 @@ OS detection is useful for tailoring attacks or defenses, especially if trying t
 **Purpose:**
 To check which UDP services might be open. UDP scans are slower and trickier but can reveal services not visible in TCP scans.
 
-![UDP Scan Top 100 Ports](screenshots/UDP Scan.png)
+![UDP Scan Top 100 Ports](screenshots/UDP-Scan.png)
 
 **Outcome:**
 
