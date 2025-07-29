@@ -71,7 +71,7 @@ These ports are typical of Windows file and printer sharing features:
 
 ### 2. OS Detection + Top 100 TCP Ports
 
-#### On my PC
+#### i. On my PC
 
 **Command Used:**
 `sudo nmap -O --top-ports 100 192.168.1.149`
@@ -89,7 +89,7 @@ The OS detection guessed it was running Windows — which was accurate.
 OS detection is useful for tailoring attacks or defenses, especially if trying to identify Windows vs Linux targets.
 
 
-#### On my router
+#### ii. On my router
 
 **Command Used:**
 `sudo nmap -O --top-ports 100 192.168.1.1`
@@ -113,7 +113,7 @@ This command checks the top 100 most common TCP ports while also attempting to d
 ### 3. UDP Scan – Top 100 UDP Ports
 
 **Command Used:**
-`sudo nmap -sU --top-ports 100 192.168.1.149`
+`sudo nmap -sU 192.168.1.149`
 
 **Purpose:**
 To check which UDP services might be open. UDP scans are slower and trickier but can reveal services not visible in TCP scans.
