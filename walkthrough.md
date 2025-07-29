@@ -71,13 +71,15 @@ These ports are typical of Windows file and printer sharing features:
 
 ### 2. OS Detection + Top 100 TCP Ports
 
+#### On my PC
+
 **Command Used:**
 `sudo nmap -O --top-ports 100 192.168.1.149`
 
 **Purpose:**
 To scan the 100 most common TCP ports and attempt to detect the target's operating system.
 
-![OS Detection + Top 100 Ports](screenshots/OS-Detection-and-Top-100-ports.png)
+![OS Detection + Top 100 Ports](screenshots/OS-Detection-Top-100-ports-on-my-PC.png)
 
 **Outcome:**
 Same open ports as before: 135, 139, and 445.
@@ -86,6 +88,27 @@ The OS detection guessed it was running Windows — which was accurate.
 **What I learned:**
 OS detection is useful for tailoring attacks or defenses, especially if trying to identify Windows vs Linux targets.
 
+
+#### On my router
+
+**Command Used:**
+`sudo nmap -O --top-ports 100 192.168.1.1`
+
+**Purpose:**
+
+This command checks the top 100 most common TCP ports while also attempting to detect the operating system running on the target. The `-O` flag enables OS detection by analyzing TCP/IP stack behavior and banners.
+
+![OS Detection + Top 100 ports on router](screenshots/OS-Detection-and-Top-100-ports.png)
+
+**What I Observed:**
+
+- Nmap guessed that the host is running inside a virtual environment (like Oracle VirtualBox or QEMU).
+
+- The scan showed the same open ports as before:
+
+	- FTP (21), DNS (53), HTTP (80), NetBIOS/SMB (139 & 445), UPnP (1900), Trivnet1 (8200).
+
+- OS detection is not guaranteed — in this case, Nmap gave a best guess based on limited evidence (only 1 open and 1 closed port).
 
 ### 3. UDP Scan – Top 100 UDP Ports
 
@@ -110,3 +133,4 @@ To check which UDP services might be open. UDP scans are slower and trickier but
 - Port 5353 is used for local network discovery (mDNS), common on modern Windows or macOS systems.
 
 - These are useful from a blue-team perspective to harden exposed services.
+
